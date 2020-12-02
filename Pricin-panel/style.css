@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------------------------- */
+/* MY CODE/NAV */
+/* ---------------------------- */
+
+
+html {font-family: Roboto, sans-serif;}
+
+
+
+.pricing-background {
+    background: linear-gradient(45deg, #353549, #a581be, #f7a0d9);
+    height: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-panel {
+    height: 450px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 7px 8px 4px #4141417b;
+    border-radius: 15px;
+}
+
+h3 {
+    font-size: 1.3em;
+    position: relative;
+    text-align: center;
+}
+
+h3::after {
+    display: flex;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: #efefef;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+h4 {
+    margin-bottom: 5px;
+    color: #fdfdfd74;;
+}
+
+h4 span {
+    color: #efefef;
+    font-weight: 700;
+}
+
+.price {
+    position: absolute;
+    color: #efefef1e;
+    font-size: 23em;
+    left: 25px;
+}
+
+.price span {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+.individual, .shared, .unlimited {
+    flex: 1;
+    height: 100%;
+    border-radius: 15px;
+    color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+
+.individual {
+    background: linear-gradient(135deg, #5967c3, #5e88b4, #5e88b4 );
+}
+
+.shared {
+    background: linear-gradient(135deg, #fd8aa5, #d988cc, #bc87ec );
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 7px 8px 4px #4141417b;
+}
+
+.unlimited {
+    background: linear-gradient(135deg, #c15d96, #e49a9e, #d8bf83 );
+}
+
+.feature {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.progress {
+    width: 100%;
+    height: 30px;
+    background-color: #1a191919;
+    border-radius: 15px;
+    box-shadow: 0 7px 8px 4px #4141417b;
+    position: relative;
+}
+
+.office::after {
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(to left, #fd8aa5, #d988cc, #bc87ec );
+    position: absolute;
+    content: "";
+    border-radius: 15px;
+}
+
+.home::after {
+    height: 100%;
+    width: 45%;
+    background: linear-gradient(to left, #c15d96, #e49a9e, #d8bf83 );
+    position: absolute;
+    content: "";
+    border-radius: 15px;
+}
+
+.large-feature {
+    text-align: center;
+}
+
+.large-feature p {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.number {
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #aaa8a8;
+    border: 1px solid #efefef;
+    padding: 15px 0;
+    width: 75%;
+    border-radius: 25px;
+    box-shadow: 0 7px 8px 4px #4141417b;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-icon {
+    margin-left: 20px;
+}
+
+@media (max-width: 840px) {
+    .pricing-panel {
+        flex-direction: column;
+        width: 266.67px;
+        height: 1400px;
+        box-shadow: none;
+    }
+    .individual, .shared, .unlimited {
+        height: 450px;
+        box-shadow: 0 7px 8px 4px #4141417b;
+    }
+
+    .shared {
+        margin: 30px 0;
+        transform: scale(1);
+    }
+
+    .pricing-background {height: 1500px;}
+}
